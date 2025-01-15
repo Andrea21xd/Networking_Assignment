@@ -69,12 +69,14 @@ public class Ball : MonoBehaviour
         
         if (collision.gameObject.tag == "Goal")
         {
-        
-        Destroy(gameObject);
 
-        Vector3 SpawnPoint = new Vector3(2.34f, 5f, -10.38f);
+        transform.position = new Vector3(2.34f, 3.5f, -10f);
 
-        Instantiate(ball, SpawnPoint, Quaternion.identity);
+       // Destroy(gameObject);
+
+       // Vector3 SpawnPoint = new Vector3(2.34f, 5f, -10.38f);
+
+       // Instantiate(ball, SpawnPoint, Quaternion.identity);
 
 
         }
