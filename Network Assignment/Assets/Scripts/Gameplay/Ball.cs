@@ -14,13 +14,6 @@ public class Ball : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
-
     private void OnCollisionStay(Collision collision)
     {
         
@@ -28,7 +21,7 @@ public class Ball : MonoBehaviour
         {
             print("touching wall");
 
-            rb.AddForce(Vector3.back * 100);
+            rb.AddForce(Vector3.back * 50);
        
         }
 
@@ -36,7 +29,7 @@ public class Ball : MonoBehaviour
         {
             print("touching wall");
 
-            rb.AddForce(Vector3.forward * 100);
+            rb.AddForce(Vector3.forward * 50);
 
         }
 
@@ -44,7 +37,7 @@ public class Ball : MonoBehaviour
         {
             print("touching wall");
 
-            rb.AddForce(Vector3.left * 100);
+            rb.AddForce(Vector3.left * 50);
 
         }
 
@@ -52,18 +45,11 @@ public class Ball : MonoBehaviour
         {
             print("touching wall");
 
-            rb.AddForce(Vector3.right * 100);
+            rb.AddForce(Vector3.right * 50);
 
         }
 
     }
-
-
-
-
-
-
-
     private void OnCollisionEnter(Collision collision)
     {     
         

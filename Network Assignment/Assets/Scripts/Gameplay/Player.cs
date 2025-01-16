@@ -38,6 +38,6 @@ public class Player : MonoBehaviour
         float xVelocity = xInput * movespeed;
         float zVelocity = zInput * movespeed;
 
-        rb.linearVelocity = new Vector3(xVelocity, rb.linearVelocity.y, zVelocity);
+         rb.linearVelocity = new Vector3(xVelocity, rb.linearVelocity.y, zVelocity);
     }
 }
