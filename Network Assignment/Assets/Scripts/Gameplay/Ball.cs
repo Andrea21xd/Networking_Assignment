@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
     public Transform ball;
+
+    public static event Action onGoal;
+    public static event Action onGoal2;
 
     Rigidbody rb;
     
@@ -55,8 +59,24 @@ public class Ball : MonoBehaviour
         
         if (collision.gameObject.tag == "Goal")
         {
+            onGoal?.Invoke();
+            print("goal player 1");
+            
+            transform.position = new Vector3(2.34f, 3.5f, -10f);
 
-        transform.position = new Vector3(2.34f, 3.5f, -10f);
+        }
+
+        if (collision.gameObject.tag == "Goal 2")
+        {        
+            onGoal2?.Invoke();
+            print("goal player 2");
+            transform.position = new Vector3(2.34f, 3.5f, -10f);    
+        }
+        
+    }
+}
+
+       //     text.SetActive(true);       
 
        // Destroy(gameObject);
 
@@ -64,8 +84,4 @@ public class Ball : MonoBehaviour
 
        // Instantiate(ball, SpawnPoint, Quaternion.identity);
 
-
-        }
-        
-    }
-}
+     

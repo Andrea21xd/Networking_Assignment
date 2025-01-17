@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8530765993160602617}
   - component: {fileID: 514808095959371632}
-  - component: {fileID: 8219479527765028874}
+  - component: {fileID: 1779184122852555945}
   m_Layer: 0
   m_Name: GoalScore
   m_TagString: Untagged
@@ -136,7 +136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.77, y: 5.23}
+  m_AnchoredPosition: {x: 0.99, y: 5.81}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &514808095959371632
@@ -147,7 +147,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3866299822038971203}
   m_CullTransparentMesh: 1
---- !u!114 &8219479527765028874
+--- !u!114 &1779184122852555945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,11 +156,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3866299822038971203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46e5e8e050d02d48962d50b25e043d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b42ce4d255892f4a9883e8f3cf1c814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8584906, g: 0.08503916, b: 0.08503916, a: 1}
+  m_Color: {r: 0.18195976, g: 0.25053585, b: 0.8207547, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 7559075840915294826}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Goal
+  m_TagString: Goal 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,8 +305,8 @@ GameObject:
   - component: {fileID: -6313519540292249728}
   - component: {fileID: -5018513197050478513}
   m_Layer: 0
-  m_Name: Goal Post
-  m_TagString: Goal
+  m_Name: Goal Post 2
+  m_TagString: Goal 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

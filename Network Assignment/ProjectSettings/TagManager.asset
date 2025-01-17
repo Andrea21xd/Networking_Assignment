@@ -10,6 +10,7 @@ TagManager:
   - Wall 2
   - Wall 3
   - Wall 4
+  - Goal 2
   layers:
   - Default
   - TransparentFX
