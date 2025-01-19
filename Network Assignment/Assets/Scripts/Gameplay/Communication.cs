@@ -10,13 +10,13 @@ public class EmojiController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Emoji.SetActive(true);
-            StartCoroutine(DisableAfterTime(3f)); // Start the coroutine with a 3-second timer
+            StartCoroutine(DisableAfterTime(3f)); 
         }
     }
 
     private IEnumerator DisableAfterTime(float delay)
     {
-        yield return new WaitForSeconds(delay); // Wait for the specified delay
-        Emoji.SetActive(false); // Disable the Emoji game object
+        yield return new WaitForSeconds(delay); 
+        Emoji.SetActive(false); 
     }
 }
