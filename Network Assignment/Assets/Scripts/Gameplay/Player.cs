@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("GameScene");
         }
     }
 

@@ -8,23 +8,40 @@ public class Emoji : NetworkBehaviour
     [SerializeField] GameObject emoji;
     
 
-
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Emote();
+            OnEmote();
         }
     }
 
 
-
-
-    public void Emote() 
+    private void OnEmote()
     {
-        Debug.Log("We are the owner of our player emoting");
-                 
+        NetworkObject networkObject = GetComponent<NetworkObject>();
+        if (IsClient && networkObject != null && networkObject.IsOwner)
+        {
+            EmoteRpc(networkObject.OwnerClientId);
+        }
+ 
+    }
+
+    private void OnEmote2()
+    {
+        NetworkObject networkObject = GetComponent<NetworkObject>();
+        if (IsClient && networkObject != null && networkObject.IsOwner)
+        {
+            EmoteRpc(networkObject.OwnerClientId);
+        }
+
+    }
+
+    [Rpc(SendTo.Server)]
+    private void EmoteRpc(ulong playerId)
+    {
+        //Debug.Log("We are the owner of our player emoting");
+
         emoji.SetActive(true);
         StartCoroutine(DisableAfterTime(3f));
     }
@@ -35,8 +52,13 @@ public class Emoji : NetworkBehaviour
         emoji.SetActive(false);
     }
 
-
-
+    public void Emote1() 
+    {
+        Debug.Log("We are the owner of our player emoting");
+                 
+        emoji.SetActive(true);
+        StartCoroutine(DisableAfterTime(3f));
+    }
 
 
 }
